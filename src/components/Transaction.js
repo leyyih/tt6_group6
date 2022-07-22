@@ -11,6 +11,9 @@ const Transaction = ({ transaction }) => {
             <td>
                 <p>{transaction["description"]}</p>
             </td>
+            <td>
+                <p>{transaction["created_at"]}</p>
+            </td>
         </tr>
     )
 }
