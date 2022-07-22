@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 import json
+from .models import *
+from django.core.serializers import serialize
 
 d1 =  {
     "id": 1,
@@ -151,4 +153,19 @@ def currency(request):
     return JsonResponse([d1,d2,d3,d4,d5,d6,d7], safe = False)
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the page.")
+    return HttpResponse("Welcome to your wallet")
+
+def loginSession(request, id):
+    
+    pass
+
+def listOfWallets(request):
+    listOfWallet = Wallet.objects.all()
+    data = serialize('json', listOfWallet)
+    return HttpResponse(data)
+
+def liveExchangeRate(request):
+    return HttpResponse('liveExchangeRate')
+
+def listOfCurrencies(request, id):
+    return HttpResponse('lstOfCurrenceis')
