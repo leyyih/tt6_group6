@@ -1,6 +1,6 @@
-.login-wrapper{
+#login-wrapper{
     float: left;
-    padding: 150px 0px 0px 400px;
+    padding: 250px 0px 0px 700px;
     width: 800px;
 }
 
@@ -9,6 +9,11 @@
     width: 570px;
 }
 
+.form-group{
+    padding-bottom: 25px;
+}
+
 #login-btn{
     width: 570px;
+    height: 40px
 }

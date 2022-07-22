@@ -46,49 +46,48 @@ const users = [
   }]
 
 const Login = () => {
-  const [username, setusername] = useState("");
-  const [password, setpassword] = useState("");
-
-  const handlesubmit = (e) => {
-    e.preventDefault();
-
-    const usercheck = users.find(user => (user.username === username && user.password === password));
-
-    if (usercheck) {
-        console.log("User Logged In");
-    } else {
-      console.log("please check you username or Email");
-    }
+    const [username, setusername] = useState("");
+    const [password, setpassword] = useState("");
+  
+    const handlesubmit = (e) => {
+      e.preventDefault();
+  
+      const usercheck = users.find(user => (user.username === username && user.password === password));
+  
+      if (usercheck) {
+          console.log("User Logged In");
+      } else {
+        console.log("please check you username or Email");
+      }
+    };
+  
+    return (
+      <div id="login-wrapper">
+        <form onSubmit={handlesubmit}>
+          <div className="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              required
+              value={username}
+              onChange={(e) => setusername(e.target.value)}
+              className="login-input"
+            />
+          </div>
+          <div className="form-group">
+            <label for="password">Password</label>
+            <input
+              type="Password"
+              required
+              value={password}
+              onChange={(e) => setpassword(e.target.value)}
+              className="login-input"
+            />
+          </div>
+          <button type="submit" id="login-btn">Log in</button>
+        </form>
+      </div>
+    );
   };
-
-  return (
-    <div id="login-wrapper">
-      <form onSubmit={handlesubmit}>
-        <div className="form-group">
-          <label htmlFor="Email or UserName">Email or username</label>
-          <input
-            type="text"
-            placeholder="email or username"
-            required
-            value={username}
-            onChange={(e) => setusername(e.target.value)}
-            className="login-input"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="Password">Password</label>
-          <input
-            type="Password"
-            placeholder="Password"
-            required
-            value={password}
-            onChange={(e) => setpassword(e.target.value)}
-            className="login-input"
-          />
-        </div>
-        <button type="submit">Log in</button>
-      </form>
-    </div>
-  );
-};
+  
 export default Login;

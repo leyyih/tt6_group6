@@ -65,10 +65,9 @@ const App = () => {
     <div id="login-wrapper">
       <form onSubmit={handlesubmit}>
         <div className="form-group">
-          <label htmlFor="Email or UserName">Email or username</label>
+          <label for="username">Username</label>
           <input
             type="text"
-            placeholder="email or username"
             required
             value={username}
             onChange={(e) => setusername(e.target.value)}
@@ -76,17 +75,16 @@ const App = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="Password">Password</label>
+          <label for="password">Password</label>
           <input
             type="Password"
-            placeholder="Password"
             required
             value={password}
             onChange={(e) => setpassword(e.target.value)}
             className="login-input"
           />
         </div>
-        <button type="submit">Log in</button>
+        <button type="submit" id="login-btn">Log in</button>
       </form>
     </div>
   );
