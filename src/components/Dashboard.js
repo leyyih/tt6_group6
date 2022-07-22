@@ -78,7 +78,7 @@ const Dashboard= ({}) => {
         <h2>Base Currency SGD</h2>
         <Row>
         {rate.map((each) => (
-          <Col key={each.id} className="d-flex justify-content-around mt-3" lg={2}>
+          <Col key={each.id} className="d-flex justify-content-around mt-3" lg={2} md={3} sm={6}>
             <Card style={{ width: '18rem', backgroundColor:'rgb(248, 240, 212)', borderColor:'white'}}>
               <Card.Body>
                 <Card.Title>{each.exchange_currency}</Card.Title>
