@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header'
 import Dashboard from './components/Dashboard'
+import Currency from './components/Currency';
 import { useState} from 'react'
 
 function App() {
@@ -156,6 +157,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <Dashboard></Dashboard>
+      <Currency></Currency>
     </div>
   );
 }
