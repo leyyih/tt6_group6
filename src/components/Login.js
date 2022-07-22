@@ -1,6 +1,5 @@
-import './Login.css';
-import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
+import useNavigate from 'react-router-dom';
 
 // async function loginUser(credentials) {
 //   return fetch('http://localhost:8080/login', {
@@ -45,6 +44,8 @@ const users = [
     "name": "Mark"
   }]
 
+const navigate = useNavigate();
+
 const Login = () => {
     const [username, setusername] = useState("");
     const [password, setpassword] = useState("");
@@ -56,6 +57,7 @@ const Login = () => {
   
       if (usercheck) {
           console.log("User Logged In");
+          navigate('/test')
       } else {
         console.log("please check you username or Email");
       }
@@ -89,5 +91,5 @@ const Login = () => {
       </div>
     );
   };
-  
+
 export default Login;
