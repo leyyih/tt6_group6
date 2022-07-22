@@ -1,7 +1,6 @@
 import Transaction from "./Transaction";
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
-import { useState } from 'react';
 
 const Transactions = ({ transactions }) => {
     return (
@@ -24,7 +23,6 @@ const Transactions = ({ transactions }) => {
                     ))}
                 </tbody>
             </Table >
-
         </Container >
     )
 }
