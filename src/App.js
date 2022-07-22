@@ -5,18 +5,27 @@ import Dashboard from './components/Dashboard'
 import Currency from './components/Currency';
 
 function App() {
-
+  const [currency,setCurrency] = useState([]);
   useEffect(() => {
-    const fetchWallets = async () => {
+    const getCurrency = async () => {
+      const CurrencyFromServer = await fetchCurrency()
+      setCurrency(CurrencyFromServer)
+    }
+
+    getCurrency()
+  }, [])
+
+
+    const fetchCurrency = async () => {
       const res = await fetch ('http://127.0.0.1:8000/api/')
       const data = await res.json()
 
       console.log(data)
-    }
+    
+    return data
+  }
 
-    fetchWallets()
-  }, [])
-  // const [currency,setCurrency] = useState([]);
+
   // const currency_list = [
   //   {
   //     "id": 1,
