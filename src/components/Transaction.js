@@ -1,5 +1,3 @@
-import Table from 'react-bootstrap/Table';
-
 const Transaction = ({ transaction }) => {
     return (
         <tr>
@@ -9,6 +7,9 @@ const Transaction = ({ transaction }) => {
             </td>
             <td><h3>{transaction["credit_currency"]}</h3>
                 <p>${transaction["credit_amount"]}</p>
+            </td>
+            <td>
+                <p>{transaction["description"]}</p>
             </td>
         </tr>
     )

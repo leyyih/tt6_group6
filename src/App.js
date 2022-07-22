@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react'
-import Header from './components/Header'
+//import Header from './components/Header'
 import Transactions from './components/Transactions'
 
 function App() {
@@ -71,7 +71,6 @@ function App() {
 
   return (
     <div className="App">
-      <Header></Header>
       <Transactions transactions={transactions} />
     </div>
   );
