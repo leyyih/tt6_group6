@@ -4,13 +4,12 @@ import Header from './components/Header'
 import Dashboard from './components/Dashboard'
 import Currency from './components/Currency';
 import Transactions from './components/Transactions'
-import { useState } from 'react'
 
 function App() {
 
   useEffect(() => {
     const fetchWallets = async () => {
-      const res = await fetch ('http://127.0.0.1:8000/api/')
+      const res = await fetch('http://127.0.0.1:8000/api/')
       const data = await res.json()
 
       console.log(data)
