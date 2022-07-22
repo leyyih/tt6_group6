@@ -1,11 +1,21 @@
 import './App.css';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Dashboard from './components/Dashboard'
 import Currency from './components/Currency';
-import { useState} from 'react'
 
 function App() {
+
+//   useEffect(() => {
+//     const fetchWallets = async () => {
+//       const res await fetch ('http://127.0.0.1/Wallets')
+//       const data = await res.json()
+
+//       console.log(data)
+//     }
+
+//     fetchWallets
+//   }, [])
   // const [currency,setCurrency] = useState([]);
   // const currency_list = [
   //   {
