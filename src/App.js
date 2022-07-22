@@ -6,16 +6,16 @@ import Currency from './components/Currency';
 
 function App() {
 
-//   useEffect(() => {
-//     const fetchWallets = async () => {
-//       const res await fetch ('http://127.0.0.1/Wallets')
-//       const data = await res.json()
+  useEffect(() => {
+    const fetchWallets = async () => {
+      const res = await fetch ('http://127.0.0.1:8000/api/')
+      const data = await res.json()
 
-//       console.log(data)
-//     }
+      console.log(data)
+    }
 
-//     fetchWallets
-//   }, [])
+    fetchWallets()
+  }, [])
   // const [currency,setCurrency] = useState([]);
   // const currency_list = [
   //   {
