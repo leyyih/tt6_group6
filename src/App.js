@@ -1,10 +1,7 @@
 import './App.css';
-<<<<<<< Updated upstream
-=======
 import { useState } from 'react'
 import Header from './components/Header'
 import Transactions from './components/Transactions'
->>>>>>> Stashed changes
 
 function App() {
   const [transactions, setTransactions] = useState(
@@ -74,13 +71,9 @@ function App() {
 
   return (
     <div className="App">
-<<<<<<< Updated upstream
-  <h1>Hello World</h1>
-=======
       <Header></Header>
       <Transactions transactions={transactions} />
->>>>>>> Stashed changes
-    </div >
+    </div>
   );
 }
 
