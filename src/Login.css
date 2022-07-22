@@ -1,0 +1,14 @@
+.login-wrapper{
+    float: left;
+    padding: 150px 0px 0px 400px;
+    width: 800px;
+}
+
+.login-input{
+    height: 46px;
+    width: 570px;
+}
+
+#login-btn{
+    width: 570px;
+}
